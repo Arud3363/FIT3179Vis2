@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Scatter plot of participation and sufficient activity by age range.",
+    "width": "container",
+    "height": "container",
+    "title": {
+      "text": "Australian Activity Level and Participation in Sport by Age Range",
+      "subtitle": "(Drag and Scroll to Resize)"},
+    "data": {
+      "url": "ParticipationHealth.csv"
+    },
+    "mark": {"type":"circle", "size": 80},
+    "params": [{"name":"grid", "select": "interval", "bind": "scales"}],
+    "encoding": {
+      "y": {
+        "field": "Participation",
+        "type": "quantitative",
+        "title": "Participation (%)"
+      },
+      "x": {
+        "field": "Sufficiently Active",
+        "type": "quantitative",
+        "title": "Sufficiently Active (%)"
+      },
+      "color": {
+        "field": "Age Range",
+        "type": "nominal",
+        "title": "Age Range"
+      },
+      "tooltip": [
+        {"field": "Age Range", "title": "Age Range"},
+        {"field": "Participation", "title": "Participation (%)"},
+        {"field": "Sufficiently Active", "title": "Sufficiently Active (%)"}
+      ]
+    },
+    "transform": [
+      {
+        "calculate": "datum['Age Range']",
+        "as": "Age Range"
+      }
+    ]
+  }
+  

@@ -1,0 +1,71 @@
+Activity_Type,Activity,Age_Range,Value
+Active,Walking for transport,18/24,94
+Active,"Walking for fitness, recreation or sport",18/24,40
+Active,Moderate,18/24,29
+Active,Vigorous,18/24,114
+Sedentary,Sitting for transport,18/24,4.9
+Sedentary,Watching television or videos,18/24,9
+Sedentary,Playing electronic games,18/24,2.2
+Sedentary,Using computer or internet,18/24,8.8
+Sedentary,Using phone,18/24,2.2
+Sedentary,Other activities(f),18/24,4.2
+Active,Walking for transport,25/34,93
+Active,"Walking for fitness, recreation or sport",25/34,47
+Active,Moderate,25/34,22
+Active,Vigorous,25/34,75
+Sedentary,Sitting for transport,25/34,5.5
+Sedentary,Watching television or videos,25/34,10.4
+Sedentary,Playing electronic games,25/34,1
+Sedentary,Using computer or internet,25/34,6.6
+Sedentary,Using phone,25/34,1.6
+Sedentary,Other activities(f),25/34,4
+Active,Walking for transport,35/44,84
+Active,"Walking for fitness, recreation or sport",35/44,58
+Active,Moderate,35/44,19
+Active,Vigorous,35/44,59
+Sedentary,Sitting for transport,35/44,6.2
+Sedentary,Watching television or videos,35/44,10.9
+Sedentary,Playing electronic games,35/44,0.4
+Sedentary,Using computer or internet,35/44,4.9
+Sedentary,Using phone,35/44,0.9
+Sedentary,Other activities(f),35/44,3.2
+Active,Walking for transport,45/54,82
+Active,"Walking for fitness, recreation or sport",45/54,75
+Active,Moderate,45/54,23
+Active,Vigorous,45/54,60
+Sedentary,Sitting for transport,45/54,5.8
+Sedentary,Watching television or videos,45/54,12.3
+Sedentary,Playing electronic games,45/54,0.3
+Sedentary,Using computer or internet,45/54,4.6
+Sedentary,Using phone,45/54,0.7
+Sedentary,Other activities(f),45/54,3.3
+Active,Walking for transport,55/64,83
+Active,"Walking for fitness, recreation or sport",55/64,75
+Active,Moderate,55/64,37
+Active,Vigorous,55/64,32
+Sedentary,Sitting for transport,55/64,5
+Sedentary,Watching television or videos,55/64,15.3
+Sedentary,Playing electronic games,55/64,0.2
+Sedentary,Using computer or internet,55/64,4
+Sedentary,Using phone,55/64,0.7
+Sedentary,Other activities(f),55/64,4.2
+Active,Walking for transport,65/74,73
+Active,"Walking for fitness, recreation or sport",65/74,80
+Active,Moderate,65/74,41
+Active,Vigorous,65/74,21
+Sedentary,Sitting for transport,65/74,3.9
+Sedentary,Watching television or videos,65/74,17.9
+Sedentary,Playing electronic games,65/74,0.2
+Sedentary,Using computer or internet,65/74,3.2
+Sedentary,Using phone,65/74,0.7
+Sedentary,Other activities(f),65/74,5.2
+Active,Walking for transport,75 years +,53
+Active,"Walking for fitness, recreation or sport",75 years +,56
+Active,Moderate,75 years +,25
+Active,Vigorous,75 years +,7
+Sedentary,Sitting for transport,75 years +,2.2
+Sedentary,Watching television or videos,75 years +,19.3
+Sedentary,Playing electronic games,75 years +,0
+Sedentary,Using computer or internet,75 years +,1.7
+Sedentary,Using phone,75 years +,0.7
+Sedentary,Other activities(f),75 years +,6.7

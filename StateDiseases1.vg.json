@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map of Australian states using TopoJSON",
+  "width": "container",
+  "height": "container",
+  "title": {
+    "text":"Proportion of Residents with 1 Long-Term Health Condition",
+    "fontSize": 7},
+    "projection": {
+      "type": "mercator"
+    },
+    "data": {
+      "url": "georef-australia-state-millesime.json",
+      "format": {
+        "type": "topojson",
+        "feature": "georef-australia-state-millesime"
+      }
+    },
+    "transform": [
+      {
+        "lookup": "properties.ste_name",
+        "from": {
+          "data": {
+            "url": "StateDiseases1.csv"
+          },
+          "key": "State",
+          "fields": ["Condition", "Percentage"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Percentage",
+        "type": "quantitative",
+        "scale": {
+          "domain": [0, 60],
+          "scheme": "reds"
+        },
+        "legend": {
+          "title": "Percentage of Population",
+          "orient": "bottom"
+        }
+      },
+      "tooltip": [
+        {"field": "properties.ste_name", "type": "nominal", "title": "State"},
+        {"field": "Percentage", "type": "quantitative", "title": "Percentage of Population", "format": ".1f"}
+      ]
+    }
+  }

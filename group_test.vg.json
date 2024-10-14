@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with embedded data.",
+    "title": "Australian Health Levels: Actual vs Self Perceived",
+    "height": "container",
+    "width": "container",
+    "data": {
+      "values": [
+        {"Category": "Healthy", "ActualPercentage": 41.5, "selfRated": 56.5, "Group": "Self Rated Proportion"},
+        {"Category": "Fair Health", "ActualPercentage": 35.7, "selfRated": 28.5, "Group": "Self Rated Proportion"},
+        {"Category": "Unhealthy", "ActualPercentage": 21.9, "selfRated": 15.1, "Group": "Actual Proportion"}
+      ]
+    },
+    "encoding": {
+      "x": {"field": "Category", "type": "nominal", "axis": {"labelAngle": 0},
+    "sort": ["Unhealthy", "Fair Health", "Healthy"]}
+    },
+    "layer": [
+      {
+        "mark": {"type": "bar", "xOffset": -20, "size": 30, "color": "#146ef5"},
+        "encoding": {
+          "y": {
+            "field": "ActualPercentage",
+            "type": "quantitative",
+            "axis": {"title": "Percentage of Australians", "ticks": false}
+          },
+          "tooltip": [
+        {"field": "Category", "type": "ordinal", "title": "Health Category"},
+        {"field": "ActualPercentage", "title": "Actual Proportion (%)", "type": "quantitative", "format": ".1f"}
+    ]
+        }
+      },
+      {
+        "mark": {"type": "bar", "size": 30, "xOffset": 18, "color": "#e30b1a"},
+        "encoding": {
+          "y": {
+            "field": "selfRated",
+            "type": "quantitative",
+            "axis": {"title": "Percentage of Australians", "ticks": false}
+          },
+          "tooltip": [
+        {"field": "Category", "type": "ordinal", "title": "Health Category"},
+        {"field": "selfRated", "title": "Self Reported Proportion (%)", "type": "quantitative", "format": ".1f"}
+    ]
+        }
+      },
+      {
+        "mark": {"type": "text"},
+        "encoding": {
+          "fill": {
+            "field": "Group",
+            "scale": {"range": ["#146ef5", "#e30b1a"]},
+            "legend": {"title": null, "symbolType": "square", "orient": "bottom"}
+          }
+        }
+      }
+    ]
+  }

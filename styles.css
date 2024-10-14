@@ -1,0 +1,177 @@
+.title{
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+*{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 450;
+}
+
+
+.chart-wrapper{
+    margin-top: 20px;
+}
+
+body{
+
+    background-color: #e0e0e0;
+    font-weight: 500;
+    font-size: 2.5vh;
+}
+
+.what{
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+.introText{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 450;
+    width: 80vw;
+    margin-bottom: 4vh;
+    margin-left: 5%;
+}
+
+
+
+.vert1{
+    width: 50vw;
+}
+
+.contextText{
+    width: 40vw;
+    height: 20vh;
+}
+
+.vert2{
+    display: flex;
+    width: 27.5vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.pyr {
+    display: flex;
+    width: 50vw;
+    height: 39vh;
+    margin-bottom: 16vh;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px 2px rgb(0 0 0 / .8);
+}
+
+.hist{
+    display: inline;
+    width: 50vw;
+    height: 40vh;
+    border: 1px solid black;
+    box-shadow: 5px 0px 10px 2px rgb(0 0 0 / .8);
+}
+
+
+.outerwrapper{
+    width: 90%;
+    margin: 0 auto; 
+}
+
+
+.innerwrapper{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+.filterText{
+    padding-right: 3px;
+}
+
+.whatNow{
+    margin-top: 2vh;
+}
+
+.v2w1{
+    width: 80vw;
+    display: flex;
+    margin-bottom: 6vh;
+}
+
+.v2w2{
+    width: 80vw;
+    display: flex;
+    border: 1px solid black;
+    box-shadow: 5px 0px 10px 2px rgb(0 0 0 / .8);
+}
+
+.wrapper2{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.choro{
+    width: 20vw;
+    height: 40vh;
+}
+
+.firstTwo{
+    display: flex;
+    width: 40vw;
+    height: 40vh;
+}
+
+.secondTwo{
+    display: flex;
+    width: 40vw;
+    float: right;
+}
+
+.barline{
+    width: 80vw;
+    height: 40vh;
+    border: 1px solid black;
+    box-shadow: 5px 0px 10px 2px rgb(0 0 0 / .8);
+}
+
+.smallBreak{
+    height: 4vh;
+}
+
+.breakDiv{
+    height: 18vh;
+}
+
+.wrapper3{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+
+.v3w1{
+    width: 30vw;
+    display: flex;
+    margin-right: 2vw;
+}
+
+.v3w2{
+    width: 50vw;
+    float: right;
+}
+
+.participation{
+    width: 50vw;
+    height: 40vh;
+    border: 1px solid black;
+    box-shadow: 5px 0px 10px 2px rgb(0 0 0 / .8);
+    margin-bottom: 12vh;
+}
+
+.pie{
+    width: 50vw;
+    height: 40vh;
+    border: 1px solid black;
+    box-shadow: 5px 0px 10px 2px rgb(0 0 0 / .8);
+    margin-bottom: 20vh;
+}
+

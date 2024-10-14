@@ -1,0 +1,23 @@
+Condition,State,Percentage
+No Conditions,New South Wales,53.4
+No Conditions,Victoria,51.0
+No Conditions,Queensland,46.2
+No Conditions,South Australia,46.3
+No Conditions,Western Australia,49.3
+No Conditions,Tasmania,41.5
+No Conditions,Northern Territory,55.0
+2,New South Wales,12.0
+2,Victoria,12.8
+2,Queensland,12.7
+2,South Australia,14.6
+2,Western Australia,14.6
+2,Tasmania,15.7
+2,Northern Territory,8.4
+3 or more,New South Wales,7.4
+3 or more,Victoria,8.8
+3 or more,Queensland,10.7
+3 or more,South Australia,10.9
+3 or more,Western Australia,8.8
+3 or more,Tasmania,12.8
+3 or more,Northern Territory,7.6
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Vega and Vega-Lite scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+        <!-- External JavaScript files -->
+        <script src="vega_pyr.js"></script>
+        <script src="vega_dis_bar.js"></script>
+        <script src="vega_bar_line.js"></script>
+        <script src="group.js"></script>
+        <script src="StateDiseases0.js"></script>
+        <script src="StateDiseases1.js"></script>
+        <script src="StateDiseases2.js"></script>
+        <script src="StateDiseases3.js"></script>
+        <script src="ParticipationHealth.js"></script>
+        <script src="Pie.js"></script>
+
+        <!-- External CSS file -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <title>VIS 2</title>
+        
+
+    </head>
+    <body class="outerwrapper">
+        <div class="what">
+            <h1 class="title">AUSTRALIAN PHYSICAL HEALTH</h1>
+                <p class="introText">Physical and mental health are crucial components required to live a fulfilling and prosperous life. But are Australians
+                    taking the necessary steps to ensure their health is in check? This visualisation explores the physical health of
+                    Australians, aiming to uncover if Australians are doing enough.
+                </p>
+                <hr>
+                <br></br>
+                <div class="innerwrapper">
+                <div class="vert1">
+                    <div class="pyr" id="vg_group"></div>
+                    <div class="hist" id="vg_dis_bar"></div>
+                </div>
+                <div class="vert2">
+                    <span class="contextText">
+                        A dangerous pattern can be observed via the charts on the left. <div class="smallBreak"></div>
+                        Australians tend to overestimate their health - despite nearly 22% of Australians being unhealthy,
+                        only 15% of them correctly identified this. <div class="smallBreak"></div>
+                        Perhaps more concerningly, nearly 57% of Australians reported themselves as healthy, when in reality only
+                        41.5% of Australians fall into this category. <div class="breakDiv"></div>
+                        A reflection of this can be seen in the diseases Australians are diagnosed with.  <div class="smallBreak"></div>
+                        Year on year more and more Australians are diagnosed with physical and mental diseases, a worrying
+                        statistic for all Australians.
+                        <br></br>
+                    </span>
+                </div>
+            </div>
+            <br></br>
+            <hr>
+            <br></br>
+            <div class="whatNow">
+                <div class="wrapper2">
+                    <div class="v2w1">
+                        <div class="barline" id="vg_barline"></div>
+                    </div>
+                    <div class="v2w2">
+                        <div class="firstTwo">
+                            <div id="state_diseases0" class="choro"></div>
+                            <div id="state_diseases1" class="choro"></div>
+                        </div>
+                        <div class="secondTwo">
+                            <div id="state_diseases2" class="choro"></div>
+                            <div id="state_diseases3" class="choro"></div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <span class="secondContextText">These Australian statistics show a concerning trend, and offer insight as to why Australian health levels appear to be worsening.
+                        It is evident that as Australians enter adulthood, they fail to meet health guidelines more and more often. With that, there appears to be an association with
+                        the increase in diseases diagnosed in Australians. <br></br>
+                        The evidence does not suggest that there is any significant difference between states, though Victoria, New South Wales and the Northern Territory are the states
+                        and territories in which over 50% of the population does not suffer from any long-term conditions.
+                    </span>
+                    <br></br>
+                </div>
+                <hr>
+                    <br></br>
+                <div class="wrapper3">
+                    <div class="v3w1"> 
+                        <span class="thirdContextText">Analysing the behaviour of Austrlians provides insight as to why health issues may be on the rise. 
+                            <div class="smallBreak"></div>
+                            Australians are spending far more time performing sedentary behaviours than they are on active behaviours. <div class="smallBreak"></div>
+                            This trend laregely follows age, as the older Australians get, the less time they spend on active behaviours. <div class="smallBreak"></div>
+                            <div class="breakDiv"></div> <div class="smallBreak"></div>
+                            This is further reflected in the participation rates of Australians in sporting activities. <div class="smallBreak"></div>
+                            Younger age groups are more likely to participate, which seems to correlate to whether or not they are sufficiently active. <div class="smallBreak"></div>
+                        </span>
+                    </div>
+                    <div class="v3w2">
+                        <div class="pie" id="vg_pie"></div>
+                        <div class="participation" id="participation_health"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Bar and line chart showing the percentage of individuals not meeting guidelines and those with long-term health issues.",
+    "data": {
+      "url": "not_meeting_guidelines_data.csv"
+    },
+    "width": "container",
+    "height": "container",
+    "title": {
+      "text": "Percentage of Australians Not Meeting Health Guidelines and Prevalence of Long-Term Health Issues by Age Group"
+    },
+    "layer": [
+      {
+        "mark": {
+            "type":"bar",
+            "size":10,
+            "color": "#fc979e"},
+        "encoding": {
+          "x": {
+            "field": "AgeGroup",
+            "type": "ordinal",
+            "title": "Age Group"
+          },
+          "y": {
+            "field": "NotMeetingGuidelines",
+            "type": "quantitative",
+            "title": "Percentage"
+          },
+          "tooltip": [
+            {"field": "AgeGroup", "type": "nominal", "title": "Age Group"},
+            {"field": "NotMeetingGuidelines", "type": "quantitative", "title": "Not Meeting Guidelines %"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "stroke": "#e30b1a",
+          "strokeWidth": 3
+        },
+        "encoding": {
+          "x": {
+            "field": "AgeGroup",
+            "type": "ordinal",
+            "title": "Age Group",
+            "axis": {"labelAngle": 0}
+          },
+          "y": {
+            "field": "HealthIssues",
+            "type": "quantitative",
+            "title": "Percentage"
+          },
+          "tooltip": [
+            {"field": "AgeGroup", "type": "nominal", "title": "Age Group"},
+            {"field": "HealthIssues", "type": "quantitative", "title": "Percentage with One or More Health Issues"}
+          ]
+        }
+      }
+    ],
+    "config": {
+      "axis": {
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      },
+      "title": {
+        "fontSize": 16
+      }
+    }
+  }
+  

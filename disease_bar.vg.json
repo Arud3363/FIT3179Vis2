@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Histogram of disease counts with year selection",
+  "width": "container",
+  "height": "container",
+  "title": "Australian Disease Counts by Year",
+  "data": {
+    "url": "disease_counts_long_format.csv"
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "value": "2001",
+      "bind": {
+        "input": "select",
+        "options": [
+          "2001",
+          "2004/05",
+          "2007/08",
+          "2011/12",
+          "2014/15",
+          "2017/18",
+          "2022"
+        ],
+        "name": "Select Year:  "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "year_select == 'null' || datum.Year == year_select"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Condition",
+          "type": "ordinal",
+          "title": "Disease",
+          "axis": {
+            "labelAngle": 0
+          },
+          "sort": {
+            "field": "Percentage",
+            "op": "mean",
+            "order": "descending"
+          }
+        },
+        "x": {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Percentage Prevalence in Population",
+          "scale": {
+            "domain": [0, 30]
+          }
+        },
+        "color": {
+          "field": "Percentage",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 20],
+            "range": ["#fc979e", "#e30b1a"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Condition", "type": "nominal"},
+          {"field": "Percentage", "title": "Australians Affected %", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -5,
+        "dy": -5,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "TotalText",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "black"
+        },
+        "x": {
+          "value": "width"
+        },
+        "y": {
+          "value": "height"
+        }
+      },
+      "transform": [
+        {
+          "filter": "year_select == 'null' || datum.Year == year_select"
+        },
+        {
+          "aggregate": [{"op": "sum", "field": "Percentage", "as": "TotalPercentage"}]
+        },
+        {
+          "calculate": "'Total Population % Represented: ' + format(datum.TotalPercentage, '.1f')",
+          "as": "TotalText"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    }
+  }
+}

@@ -1,0 +1,85 @@
+Condition,Year,Percentage
+Arthritis,2001,13
+Asthma,2001,11
+Back problems,2001,21
+Cancer,2001,1
+COPD,2001,3
+Diabetes,2001,3
+Hayfever,2001,15
+Heart/Stroke/Vascular,2001,4
+Hypertension,2001,10
+Kidney Disease,2001,0
+Mental Conditions,2001,9
+Osteoporosis,2001,2
+Arthritis,2004/05,15
+Asthma,2004/05,10
+Back problems,2004/05,16
+Cancer,2004/05,2
+COPD,2004/05,3
+Diabetes,2004/05,1
+Hayfever,2004/05,16
+Heart/Stroke/Vascular,2004/05,4
+Hypertension,2004/05,10
+Kidney Disease,2004/05,0
+Mental Conditions,2004/05,10
+Osteoporosis,2004/05,3
+Arthritis,2007/08,15
+Asthma,2007/08,10
+Back problems,2007/08,14
+Cancer,2007/08,2
+COPD,2007/08,2
+Diabetes,2007/08,4
+Hayfever,2007/08,15
+Heart/Stroke/Vascular,2007/08,5
+Hypertension,2007/08,9
+Kidney Disease,2007/08,0
+Mental Conditions,2007/08,11
+Osteoporosis,2007/08,3
+Arthritis,2011/12,14
+Asthma,2011/12,10
+Back problems,2011/12,13
+Cancer,2011/12,1
+COPD,2011/12,2
+Diabetes,2011/12,4
+Hayfever,2011/12,16
+Heart/Stroke/Vascular,2011/12,5
+Hypertension,2011/12,10
+Kidney Disease,2011/12,1
+Mental Conditions,2011/12,13
+Osteoporosis,2011/12,3
+Arthritis,2014/15,15
+Asthma,2014/15,10
+Back problems,2014/15,16
+Cancer,2014/15,2
+COPD,2014/15,3
+Diabetes,2014/15,5
+Hayfever,2014/15,19
+Heart/Stroke/Vascular,2014/15,5
+Hypertension,2014/15,11
+Kidney Disease,2014/15,1
+Mental Conditions,2014/15,17
+Osteoporosis,2014/15,3
+Arthritis,2017/18,15
+Asthma,2017/18,11
+Back problems,2017/18,16
+Cancer,2017/18,2
+COPD,2017/18,2
+Diabetes,2017/18,5
+Hayfever,2017/18,19
+Heart/Stroke/Vascular,2017/18,5
+Hypertension,2017/18,10
+Kidney Disease,2017/18,1
+Mental Conditions,2017/18,19
+Osteoporosis,2017/18,4
+Arthritis,2022,14
+Asthma,2022,11
+Back problems,2022,15
+Cancer,2022,2
+COPD,2022,2
+Diabetes,2022,5
+Hayfever,2022,23
+Heart/Stroke/Vascular,2022,5
+Hypertension,2022,11
+Kidney Disease,2022,1
+Mental Conditions,2022,25
+Osteoporosis,2022,3

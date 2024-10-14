@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Time Australians Spend on Activities/Behaviours Weekly",
+  "width": "container",
+  "height": "container",
+  "title": "Time Australians Spend on Activities/Behaviours Weekly",
+  "data": {
+    "url": "PieData.csv"
+  },
+  "params":[
+    {
+      "name": "age_select",
+      "value": "18/24",
+      "bind": {
+        "input": "select",
+        "options": [
+          "18/24",
+          "25/34",
+          "35/44",
+          "45/54",
+          "55/64",
+          "65/74",
+          "75 years +"
+        ],
+        "labels": [
+          "18-24",
+          "25-34",
+          "35-44",
+          "45-54",
+          "55-64",
+          "65-74",
+          "75+"
+        ],
+        "name": "Select Age Range:  "
+      }
+    },
+    {
+      "name": "behaviour_select",
+      "value": "Active",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Active",
+          "Sedentary"
+        ],
+        "name": "Select Behaviour Type:  "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "age_select == 'null' || datum.Age_Range == age_select"
+    },
+    {
+      "filter": "behaviour_select == 'null' || datum.Activity_Type == behaviour_select"
+    },
+    {
+      "calculate": "datum.Activity_Type == 'Active' ? datum.Value / 60 : datum.Value",
+      "as": "ValueInHours"
+    },
+    {
+      "calculate": "replace(datum.Age_Range, '/', ' - ')",
+      "as": "Age_Range"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "arc",
+      "encoding": {
+        "theta": {
+          "field": "ValueInHours",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Activity",
+          "type": "nominal",
+          "scale": {
+            "scheme": "category10"
+          }
+        },
+        "tooltip": [
+          {"field": "Activity", "title": "Activity/Activity Level"},
+          {"field": "ValueInHours", "title": "Time Spent (hours)", "format": ".1f"},
+          {"field": "Activity_Type", "title": "Activity Type"},
+          {"field": "Age_Range", "title": "Age Range"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": 350,
+        "dy": 100,
+        "fontSize": 12,
+        "fontStyle": "italic"
+      },
+      "transform": [
+        {
+          "aggregate": [{"op": "sum", "field": "ValueInHours", "as": "TotalTime"}]
+        },
+        {
+          "calculate": "'Total Time: ' + format(datum.TotalTime, '.1f') + ' hours'",
+          "as": "TotalText"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "TotalText",
+          "type": "nominal",
+          "title": "Total Time"
+        },
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    }
+  }
+}
